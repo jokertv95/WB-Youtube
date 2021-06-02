@@ -1,4 +1,7 @@
 /** @format **/
+
+$icon_size: 1.2em;
+
 #wrapper{
     display: grid;
     grid-template-columns: 150px 1fr ;
@@ -49,7 +52,18 @@ a {
   .side-menu {
     padding-left: 28px;
     width: 15%;
+    a{
+        display: inline-block;
+    text-decoration: none;
+    color: #606060;
+    padding: 15px;
+    font-size: 20px;
+  
+    width: 100%;
+    box-sizing: border-box;
+    }
   }
+
   
 
   .side-menu-1,
