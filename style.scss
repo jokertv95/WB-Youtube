@@ -1,0 +1,72 @@
+/** @format **/
+#wrapper{
+    display: grid;
+    grid-template-columns: 150px 1fr ;
+}
+
+
+a {
+    text-decoration: none;
+  }
+  
+  span {
+    display: inline-block;
+    padding: 10px 0 10px 0;
+    font-size: 18px;
+  }
+  
+  .header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  
+  .icon-dropDown {
+    padding: 0 28px 0 28px;
+  }
+  
+  .icon-create,
+  .icon-menu,
+  .icon-notification,
+  .icon-account {
+    padding: 0 28px 0 0;
+  }
+  
+  .centerHeader,
+  .leftHeader,
+  .rightHeader {
+    display: flex;
+    position: relative;
+  }
+  
+  .searchBtn {
+    position: relative;
+    left: 20px;
+  }
+  
+  .side-menu {
+    padding-left: 28px;
+    width: 15%;
+  }
+  
+
+  .side-menu-1,
+  .side-menu-2,
+  .side-menu-3,
+  .side-menu-4,
+  .side-menu-5 {
+    display: inline-block;
+    flex-direction: column;
+    align-items: space-around;
+    border-bottom: 0.1px solid black;
+  }
+  
+  .side-menu-6,
+  .side-menu-7 {
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+  }
+  
