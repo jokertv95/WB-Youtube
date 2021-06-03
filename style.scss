@@ -5,8 +5,15 @@ $icon_size: 1.2em;
 #wrapper{
     display: grid;
     grid-template-columns: 150px 1fr ;
+    box-sizing: border-box;
+    padding-top: 56px;
+    min-height: 100vh;
 }
 
+body{
+  background: #f1f1f1;
+  margin: 0;
+}
 
 a {
     text-decoration: none;
@@ -24,6 +31,9 @@ a {
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
+    background: #f1f1f1;
+    position: fixed;
+    height: 56px;
   }
   
   .icon-dropDown {
@@ -52,6 +62,8 @@ a {
   .side-menu {
     padding-left: 28px;
     width: 15%;
+    background: #fff;
+    min-height: 100vh ;
     a{
         display: inline-block;
     text-decoration: none;
@@ -83,4 +95,15 @@ a {
     flex-direction: row;
     align-content: space-around;
   }
-  
+
+  div.cover-img{
+    height: 196px;
+    background:#9e9d8f;
+    background: url(https://cdn.pixabay.com/photo/2018/05/26/21/21/blue-berries-3432295__480.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .profile_top{
+    justify-content: space-around;
+  }
