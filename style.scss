@@ -1,5 +1,7 @@
 /** @format **/
 
+@import url(icon-fonts.css);
+@import url(roboto-fonts.css);
 $icon_size: 1.2em;
 
 $accent_color: #ee4343;
@@ -23,6 +25,7 @@ $accent_color: #ee4343;
 body{
   background: #f1f1f1;
   margin: 0;
+  font-family: Roboto, sans-serif;
 }
 
 a {
@@ -70,10 +73,10 @@ a {
   }
   
   .side-menu {
-    display: inline-block;
     padding-left: pxToEm(28);
     background: #fff;
     min-height: 100vh ;
+    
     a{
       display: inline-block;
       text-decoration: none;
@@ -82,27 +85,29 @@ a {
       font-size: pxToEm(20);
       width: 100%;
       box-sizing: border-box;
+
+      &:hover{
+        color: $accent_color;
+        background: rgba(94,94,94,0.459);
+      }
     }
   }
+  #wrapper.visible-side-menu {
+    font-size: pxToEm(16);
+    grid-template-columns: 40px 1fr;
 
-  
-
-  .side-menu-1,
-  .side-menu-2,
-  .side-menu-3,
-  .side-menu-4,
-  .side-menu-5 {
-    display: inline-block;
-    flex-direction: column;
-    align-items: space-around;
-    border-bottom: 0.1px solid black;
-  }
-  
-  .side-menu-6,
-  .side-menu-7 {
-    display: flex;
-    flex-direction: row;
-    align-content: space-around;
+    .side-menu {
+      font-size: 17px;
+      a{
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+      }
+      span{
+        font-size: 13px;
+        margin: 0;
+      }
+    }
   }
 
   div.cover-img{
@@ -193,19 +198,38 @@ a {
     @media only screen and (max-width: 1000px) {
     #wrapper{
       font-size: pxToEm(16);
-      grid-template-columns: 1fr;
-    }
-      div .side-menu {
-        font-size: pxToEm(16);
-        display: none;
+      grid-template-columns: 40px 1fr;
+
+      .side-menu {
+        font-size: 17px;
+        a{
+          display: flex;
+          flex-direction:column;
+          align-items: center;
+        }
+        span{
+          font-size: 13px;
+          margin: 0;
+        }
       }
-      .side-menu.visible{
-        display: block;
-        position: fixed;
-        width: 240px;
-        min-height: 100vh;
-      }
     }
+    #wrapper.visible-side-menu{
+      grid-template-columns: pxToEm(240) 1fr;
+
+      .side-menu{
+        font-size: 20px;
+
+        a{
+          display: inline-block;
+        }
+        span{
+          font-size: 1em;
+          margin-left: pxToEm(26 );
+        }
+      }
+  }  
+}
+
 
     @media only screen and (max-width: 600px) {
     .profile{
@@ -214,9 +238,12 @@ a {
     .preview{
       padding: 0 20px;
       font-size: 16px;
+
       iframe{
         font-size: 4.25vw;
        }
     }
-    
-    }
+    #wrapper.visible-side-menu{
+      grid-template-columns: pxToEm(16,16) 1fr;
+  }  
+  }
